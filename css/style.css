@@ -10,7 +10,7 @@ html {
 body {
       font: 16px FiraGO, georgia, sans-serif;
       color: #586e75;
-      margin: 0 10px 10px;
+      margin: 0 20px 20px !important;
 }
 
 .masthead {
