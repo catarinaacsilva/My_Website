@@ -21,3 +21,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.view {
+  color: black;
+  background: url("../img/img01.jpg")no-repeat center center;
+  background-size: cover;
+}
+
