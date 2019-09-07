@@ -13,6 +13,13 @@ body {
       margin: 0 20px 20px !important;
 }
 
+/* mudar margin do conteudo (pagina about conteudo do meio) */
+.margin-middle{
+  margin: 0 100px 100px !important;
+}
+
+
+
 .masthead {
   height: 100vh;
   min-height: 500px;
