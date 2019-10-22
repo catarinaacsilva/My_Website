@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      
+    <title>Catarina Silva</title>
+  </head>
+  <body>
+      <header>
+          <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"href="../about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="../projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contacts.html">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../blog.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="view intro-2" style="height: 250px;padding:0" class="panel-heading">
+                <div class="full-bg-img">
+                  <div class="mask rgba-black-strong flex-center">
+                    <div class="container">
+                      <div class="white-text text-center wow fadeInUp">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <h2>Catarina Silva</h2>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+
+        </header>
+
+        <div class="container">
+          <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+              <h1 class="font-weight-light">Terraform and OpenStack</h1>
+              <p class="lead"> Terraform: Use Infrastructure as Code to provision and manage any cloud, infrastructure, or service</p>
+              <p class="lead"> OpenStack: cloud operating system open source for creating public and private instances.</p>
+              <h4> <b>Requirements</b> </h4>
+              <ul>
+                  <li>An OpenStack user</li>
+                  <li>OpenStack environment variables</li>
+                  <li>SSH key: generate your key pair</li>
+                  <li>Terraform executable</li>
+                  <ol>
+                      <li>wget https://releases.hashicorp.com/terraform/0.12.9/terraform_0.12.9_linux_amd64.zip</li>
+                      <li>unzip terraform_0.12.9_linux_amd64.zip</li>
+                      <li>sudo mv terraform /usr/local/bin/terraform</li>
+                      <li>terraform -v</li>
+                    </ol>
+                  <li>OpenStack executables</li>
+                    <ol>
+                        <li>sudo apt install python-openstackclient</li>
+                    </ol>
+              </ul>
+              <h4> Virtual Environment </h4>
+              <ol>
+                  <li>python3 -m venv venv</li>
+                  <li>source venv/bin/activate</li>
+              </ol>
+              <h4> Create an Terraform environment </h4>
+              <ol>
+                  <li>terraform env new test_terrafor</li>
+              </ol>
+              <h4>Run file with OpenStack environment variables</h4>
+              <ol>
+                <li>.terraform-openrc.sh</li>
+              </ol>
+              <p> complete this file with information about openstack (you can obtain this in your private account at openstack) </p>
+              <h4>Create an instance</h4>
+              <ol>
+                  <li>pip install python-novaclient</li>
+                  <li>pip install python-glanceclient</li>
+                  <li> To find all flavor names, or instances types: nova flavor-list </li>
+                  <li>To find all image name: glance image-list</li>
+                  <li>Create file simple_instance.tf</li>
+              </ol>
+              <h4>Run</h4>
+              <ol>
+                <li>terraform apply</li>
+              </ol>
+              <h4>Run in a new session</h4>
+              <ol>
+                <li>.terraform-openrc.sh</li>
+                <li>nova flavor-list</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; My Website</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+               
+  </body>
+</html>
