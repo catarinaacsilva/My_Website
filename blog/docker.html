@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      
+    <title>Catarina Silva</title>
+  </head>
+  <body>
+      <header>
+          <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"href="../about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="../projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contacts.html">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../blog.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="view intro-2" style="height: 250px;padding:0" class="panel-heading">
+                <div class="full-bg-img">
+                  <div class="mask rgba-black-strong flex-center">
+                    <div class="container">
+                      <div class="white-text text-center wow fadeInUp">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <h2>Catarina Silva</h2>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+
+        </header>
+
+        <div class="container">
+          <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+              <h1 class="font-weight-light">Docker and Docker Compose</h1>
+              <p class="lead"> Docker is an aplication that simplify the way of manager content of containers.
+                  Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+                  Docker is a bit like a virtual machine but Docker allows applications to use the same Linux kernel as the system that they're running on and only requires applications be shipped with things not already running on the host computer.
+                  It gives a significant performance boost and reduces the size of the application.</p>
+              
+              <h4> Requirements </h4>
+              <ul>
+                  <li>Ubuntu 18.04</li>
+              </ul>
+              <h4> Start </h4>
+              <ul>
+                  <li>Create an instance (e.g. OpenStack) with Ubuntu 18.04.</li>
+                  <li>Follow steps to install and configure Docker.</li>
+              </ul>
+             <h4>How to install and configure Docker on Ubuntu 18.04</h4>
+             <ul>
+               <li>Update official repository of Ubuntu</li>
+               <ol>
+                 <li>sudo apt update</li>
+               </ol>
+               <li>Install some packages to allows apt use HTTPS</li>
+               <ol>
+                 <li>sudo apt install apt-transport-https ca-certificates curl software-properties-common</li>
+               </ol>
+               <li>Add GPG key to official repository on your system</li>
+               <ol>
+                 <li>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</li>
+               </ol>
+               <li>Add Docker repository to APT sources </li>
+               <ol>
+                 <li>apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</li>
+               </ol>
+               <li>Update the system with Docker repository recently added</li>
+               <ol>
+                 <li>sudo apt update</li>
+               </ol>
+               <li>Check if you will install from Docker repository rather than from default Ubuntu repository</li>
+               <ol>
+                 <li>apt-cache policy docker-ce</li>
+               </ol>
+               <li> Install Docker</li>
+               <ol>
+                 <li>sudo apt install docker-ce</li>
+               </ol>
+               <li>Check if Docker is running</li>
+               <ol>
+                 <li>sudo systemctl status docker</li>
+               </ol>
+             </ul>
+             <h4>Access over SSH (configure in your system)</h4>
+             <ol>
+               <li>Add your public key to other machine</li>
+               <li>docker -H ssh://NAME@IP</li>
+             </ol>
+             <h4>Install Docker Compose on your system and instance created</h4>
+             <ol>
+               <li>udo curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose</li>
+               <li>sudo chmod +x /usr/local/bin/docker-compose</li>
+               <li>docker-compose --version</li>
+             </ol>
+             <h4>Create docker compose in your system</h4>
+             <ol>
+               <li>mkdir docker</li>
+               <li>vim docker-compose.yml</li>
+               <li>docker images</li>
+               <li>docker-compose up</li>
+             </ol>
+             <h4>Notes</h4>
+             <p>If you turn off the docker:</p>
+             <ol>
+               <li>docker-compose down</li>
+             </ol>
+             <p>If you turn on the docker:</p>
+             <ol>
+               <li>docker-compose up</li>
+             </ol>
+             <p>When you turn off the docker and turn on again, the configuration files will run again. 
+               If you change configuration files (e.g to install new software) you must turn off the docker. 
+               But if you update to new versions of software on configuration files, the oldest version persists in docker but it isn't used.
+             </p>
+            </div>
+          </div>
+        </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; My Website</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+               
+  </body>
+</html>
